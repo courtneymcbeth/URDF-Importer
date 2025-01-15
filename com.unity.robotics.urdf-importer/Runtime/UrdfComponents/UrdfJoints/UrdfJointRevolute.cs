@@ -101,6 +101,14 @@ namespace Unity.Robotics.UrdfImporter
         {
             AdjustMovement(joint);
             SetDynamics(joint.dynamics);
+
+            mimic = joint.mimic != null;
+            if (mimic)
+            {
+                mimicJointName = joint.mimic.joint;
+                mimicMultiplier = joint.mimic.multiplier;
+                mimicOffset = joint.mimic.offset;
+            }
         }
 
         protected override Joint ExportSpecificJointData(Joint joint)

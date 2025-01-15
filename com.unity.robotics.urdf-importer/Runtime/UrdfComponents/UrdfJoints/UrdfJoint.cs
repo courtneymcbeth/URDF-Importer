@@ -49,6 +49,11 @@ namespace Unity.Robotics.UrdfImporter
         public double EffortLimit = 1e3;
         public double VelocityLimit = 1e3;
 
+        public bool mimic = false;
+        public string mimicJointName;
+        public double mimicMultiplier = 1;
+        public double mimicOffset = 0;
+
         protected const int RoundDigits = 6;
         protected const float Tolerance = 0.0000001f;
 
